@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+    //自定义对象
+    //var user = {
+    //    name : "Tom",
+    //    age : 21,
+    //    eat : function(){
+    //        alert("用膳！");
+    //    },
+    //    sleep(){
+    //        alert("睡觉！");
+    //    }
+    //}
+    //alert(user.name);
+    //user.eat();
+    //user.sleep();
+
+    //JSON格式字符串
+    var jsonStr = '{"name":"Tom","age":21,"addr":["北京","上海","郑州"]}';
+
+    //JSON格式字符串转变为JSON对象
+    jsonObj = JSON.parse(jsonStr);
+    alert(jsonObj.name);
+    alert(jsonObj.addr);
+
+    //JSON对象转换成JSON格式字符串
+    alert(JSON.stringify(jsonObj));
+</script>
+</html>

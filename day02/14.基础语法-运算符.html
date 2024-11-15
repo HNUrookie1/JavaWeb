@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+    // ==会进行类型的转换，===不会进行类型的转换
+    //var age=20;
+    //var _age="20";
+    //var $age=20;
+//
+    //alert(age == _age);
+    //alert(age === _age);
+    //alert(age === $age);
+
+    //类型转换，字符串转换为数字
+    //alert(parseInt("12"));  // 12
+    //alert(parseInt("12A45")); // 12
+    //alert(parseInt("A45")); // NaN (not a number)
+
+    //其他类型转换为boolean
+    if(0){
+        alert("0转换成false");
+    }
+    if(NaN){
+        alert("NaN转换成false");
+    }
+    if(-1){
+        alert("除去0和NaN外都转换成true");
+    }
+    if(""){
+        alert('\"转换成false');
+    }
+    if("aa"){
+        alert('除去空字符串外都转换成true');
+    }
+    if(null){
+        alert("null转换成false");
+    }
+    if(undefined){
+        alert("undefined转换成false");
+    }
+
+</script>
+</html>

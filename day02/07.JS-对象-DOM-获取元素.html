@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img id = "h1" src="img/off.png"> <br><br>
+
+    <div class="cls">传智教育</div> <br>
+    <div class="cls">黑马程序员</div> <br>
+
+    <input type="checkbox" name="hobby"> 电影
+    <input type="checkbox" name="hobby"> 音乐
+    <input type="checkbox" name="hobby"> 小说
+
+</body>
+
+<script>
+    //获取Element元素
+    //1.1获取元素-通过ID获取
+    //var img = document.getElementById("h1");
+    //alert(img);
+
+    //1.2获取元素-通过标签获取 div
+    //var divArr = document.getElementsByTagName("div");
+    //for(let i = 0;i < divArr.length; i++)
+    //    alert(divArr[i]);
+    
+    //1.3获取元素-通过name获取
+    //var ins = document.getElementsByName("hobby");
+    //for(let i = 0;i < ins.length;i ++)
+    //    alert(ins[i]); //返回[object HTMLInputElement]
+    
+    //1.4获取元素-通过class属性获取
+    //var divArr = document.getElementsByClassName("cls");
+    //for(let i = 0;i < divArr.length;i ++)
+    //    alert(divArr[i]); //[object HTMLDivElement]
+
+    //2查询参考手册，属性和方法
+    var divArr = document.getElementsByClassName("cls");
+    var div1 = divArr[0];
+    div1.innerHTML = "百度";
+</script>
+</html>

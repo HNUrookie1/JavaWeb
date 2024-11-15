@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue-指令-V-on</title>
+    <script src="js/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <input type="button" value="按钮1" v-on:click="handle">
+        <input type="button" value="按钮2" @click="handle()">
+    </div>
+</body>
+
+<script>
+    new Vue({
+        el : "#app",
+        data : {
+
+        },
+        methods:{
+            handle: function(){
+                alert("你点我了一下...");
+            } 
+        }
+    })
+</script>
+</html>

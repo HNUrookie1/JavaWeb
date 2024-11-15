@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML 表单项标签</title>
+</head>
+
+<body>
+    <form action="" method="post">
+        姓名：<input type="text" name="username"> <br><br>
+        密码：<input type="password" name="password"> <br><br>
+        性别：<label><input type="radio" name="gender" value="1">男</label>
+        <label><input type="radio" name="gender" value="2">女</label> <br><br>
+        爱好：<label><input type="checkbox" name="hobby" value="Java">Java</label>
+        <label><input type="checkbox" name="hobby" value="Game">Game</label>
+        <label><input type="checkbox" name="hobby" value="Girl">Girl</label> <br><br>
+        图像：<input type="file" name="image"> <br><br>
+        生日：<input type="date" name="birthday"> <br><br>
+        时间：<input type="time" name="time"> <br><br>
+        日期时间：<input type="datetime-local" name="datetime"> <br><br>
+        邮箱：<input type="email" name="email"> <br><br>
+        年龄：<input type="number" name="age"> <br><br>
+        学历：<select name="" id="">
+            <option value="">---请选择----</option>
+            <option value="1">大专</option>
+            <option value="2">本科</option>
+            <option value="3">硕士</option>
+            <option value="4">博士</option>
+        </select> <br><br>
+        描述：<textarea name="description" cols="30" rows="5"></textarea> <br><br>
+        <input type="hidden" name="id" value="1">
+        
+        <!-- 表单常见按钮 -->
+        <input type="button" value="按钮">
+        <input type="submit" value="提交">
+        <input type="reset" value="重置">
+        <br>
+
+    </form>
+</body>
+
+</html>

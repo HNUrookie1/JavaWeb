@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue-指令-v-if&v-show</title>
+    <script src="js/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        年龄：<input type="text" v-model="age">经判定，为：
+        <span v-if="age <= 30">青年人（35岁及以下）</span>
+        <span v-else-if="age > 30 & age <=60">中年人（35-60岁）</span>
+        <span v-else>老年人（60岁以上）</span>
+        <br><br>
+
+        <!-- v-show条件不成立也会渲染，但是通过css的style样式的none属性展示 -->
+        年龄：<input type="text" v-model="age">经判定，为：
+        <span v-show="age <= 30">青年人（35岁及以下）</span>
+        <span v-show="age > 30 & age <= 60">中年人（35-60岁）</span>
+        <span v-show="age > 60">老年人（60岁以上）</span>
+    </div>
+</body>
+
+<script>
+    new Vue({
+        el:"#app",
+        data:{
+            age:20
+        },
+        methods:{
+
+        }
+    })
+</script>
+</html>

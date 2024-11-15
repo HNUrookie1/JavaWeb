@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img id = "h1" src="img/off.png"> <br><br>
+
+    <div class="cls">传智教育</div> <br>
+    <div class="cls">黑马程序员</div> <br>
+
+    <input type="checkbox" name="hobby"> 电影
+    <input type="checkbox" name="hobby"> 音乐
+    <input type="checkbox" name="hobby"> 小说
+
+</body>
+
+<script>
+    //1、点亮灯泡 设置src属性
+    var img = document.getElementById("h1");
+    img.src = "img/on.png";
+
+    //2、将所有div标签的内容后面加上very good，红色字体 --<font color='red'>very good</font>
+    // div.innerHTML可以识别HTML代码
+    var divArr = document.getElementsByTagName("div");
+    for(let i = 0;i < divArr.length; i++){
+        var div = divArr[i];
+        div.innerHTML += "<font color='red'>very good</font>";
+    }
+
+    //3、使所有复选框被选中
+    var checkBrr = document.getElementsByName("hobby");
+    for(let i = 0;i < checkBrr.length;i ++){
+        var check = checkBrr[i];
+        check.checked = true;
+    }
+</script>
+</html>

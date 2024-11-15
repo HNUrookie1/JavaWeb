@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+    //定义数组
+    //var arr = new Array(1,2,4,5);
+    //console.log(arr[0]);
+    //console.log(arr[1]);
+
+    //定义数组的第二种方式
+    //var brr = [1,4,5,6];
+    //console.log(brr[1]);
+    //brr[2] = 10;
+    //console.log(brr[2]);
+//
+    ////js中数组长度可变，类型也可变
+//
+    //brr[10] = 50;
+    //console.log(brr[8]);
+    //console.log(brr[9]);
+    //console.log(brr[10]);
+//
+    //brr[6] = "a";
+    //brr[7] = "true";
+//
+    //console.log(brr);
+    var arr = [1,2,3,4];
+    arr[10] = 10;
+    for(let i = 0;i < arr.length;i ++)
+        console.log(arr[i]);
+    console.log("==============");
+    //forEach循环,只输出有值的元素
+    //arr.forEach(function(e){
+    //    console.log(e);
+    //}); 
+    // 箭头函数：() =>{...}  简化函数定义
+    arr.forEach((e) => {
+        console.log(e);
+    });
+
+    //push函数：添加元素到末尾
+    arr.push(7,8,9,10);
+    arr.splice(2,2); //splice(start,number)开始处，删除几个
+    console.log(arr);
+
+</script>
+
+</html>

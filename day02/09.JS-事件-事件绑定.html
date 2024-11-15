@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-事件-事件绑定</title>
+</head>
+<body>
+    <!-- 通过HTML标签中的事件属性进行绑定 -->
+    <input type="button" onclick="on()" id="btn1" value="事件绑定1">
+    <!-- 通过DOM元素属性绑定 -->
+    <input type="button" id="btn2" value="事件绑定2">
+
+</body>
+
+<script>
+    function on(){
+        alert("我被点击了1");
+    }
+    
+    document.getElementById("btn2").onclick = function(){
+        alert("我被点击了2");
+    }
+</script>
+</html>
