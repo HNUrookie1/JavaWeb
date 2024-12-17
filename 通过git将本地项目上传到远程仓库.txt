@@ -2,9 +2,11 @@
 2、本地操作（本次仓库默认不包含README）： 
                         git init
 	        git add .
-	        git config --global user.name "HNUrookie1"
-                        git config --global user.email "1964573432@qq.com"
+	        git config --global user.name "github账户名"
+                        git config --global user.email "邮箱"
                         git commit -m "my first commit"
                         git remote add origin  https://github.com/HNUrookie1/xxx.git
                         git pull --rebase origin origin
 	        git push -u origin master:origin
+3、注意  git push -u origin master:origin 执行成功后，会将本地master分支指向远程分支origin。
+      也就是branch 'master' set up to track 'origin/origin'.
