@@ -22,7 +22,11 @@
 > 注意：  git push -u origin master:origin 执行成功后，会将本地master分支指向远程分支origin。也就是branch 'master' set up to track 'origin/origin'.
 
 # 使用 git lfs 上传单个大文件到远程仓库：
+
+首先要确保git lfs本地已经安装，再执行以下命令：
+
 ```
+git lfs install
 git lfs track "大文件的名称"  
 git add .gitattributes  
 git add "上面追踪的大文件的名称"  
