@@ -3,7 +3,7 @@
                         git init
 	        git add .
 	        git config --global user.name "HNUrookie1"
-                        git config --global user.email "1964573432"
+                        git config --global user.email "1964573432@qq.com"
                         git commit -m "my first commit"
                         git remote add origin  https://github.com/HNUrookie1/xxx.git
                         git pull --rebase origin origin
