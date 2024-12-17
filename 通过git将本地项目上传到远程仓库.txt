@@ -1,0 +1,10 @@
+1、github上新建一个仓库，填入描述，加入README文件
+2、本地操作（本次仓库默认不包含README）： 
+                        git init
+	        git add .
+	        git config --global user.name "HNUrookie1"
+                        git config --global user.email "1964573432"
+                        git commit -m "my first commit"
+                        git remote add origin  https://github.com/HNUrookie1/xxx.git
+                        git pull --rebase origin origin
+	        git push -u origin master:origin

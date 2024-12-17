@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<emps>
+    <emp>
+        <name>金毛狮王</name>
+        <age>55</age>
+        <image>https://web-framework.oss-cn-hangzhou.aliyuncs.com/web/1.jpg</image>
+        <!-- 1: 男, 2: 女 -->
+        <gender>1</gender>
+        <!-- 1: 讲师, 2: 班主任 , 3: 就业指导 -->
+        <job>1</job>
+    </emp>
+
+    <emp>
+        <name>白眉鹰王</name>
+        <age>65</age>
+        <image>https://web-framework.oss-cn-hangzhou.aliyuncs.com/web/2.jpg</image>
+        <gender>1</gender>
+        <job>1</job>
+    </emp>
+
+    <emp>
+        <name>青翼蝠王</name>
+        <age>45</age>
+        <image>https://web-framework.oss-cn-hangzhou.aliyuncs.com/web/3.jpg</image>
+        <gender>1</gender>
+        <job>2</job>
+    </emp>
+
+    <emp>
+        <name>紫衫龙王</name>
+        <age>38</age>
+        <image>https://web-framework.oss-cn-hangzhou.aliyuncs.com/web/4.jpg</image>
+        <gender>2</gender>
+        <job>3</job>
+    </emp>
+</emps>

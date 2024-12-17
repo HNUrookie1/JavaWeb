@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-事件-案例</title>
+</head>
+<body>
+
+    <img id="light" src="img/off.gif"> <br>
+
+    <input type="button" value="点亮" onclick="on()"> 
+    <input type="button"  value="熄灭" onclick="off()">
+
+    <br> <br>
+
+    <input type="text" id="name" value="ITCAST" onfocus="lower()" onblur="upper()">
+    <br> <br>
+
+    <input type="checkbox" name="hobby"> 电影
+    <input type="checkbox" name="hobby"> 旅游
+    <input type="checkbox" name="hobby"> 游戏
+    <br>
+
+    <input type="button" value="全选" onclick="checkAll()"> 
+    <input type="button" value="反选" onclick="reverse()">
+
+</body>
+
+<script>
+
+    //1. 点击 "点亮" 按钮, 点亮灯泡; 点击 "熄灭" 按钮, 熄灭灯泡; -- onclick
+    function on(){
+        //a. 获取img元素对象
+        var img = document.getElementById("light");
+
+        //b. 设置src属性
+        img.src = "img/on.gif";
+    }
+
+    function off(){
+        //a. 获取img元素对象
+        var img = document.getElementById("light");
+
+        //b. 设置src属性
+        img.src = "img/off.gif";
+    }
+
+
+
+    //2. 输入框聚焦后, 展示小写; 输入框离焦后, 展示大写; -- onfocus , onblur
+    function lower(){//小写
+        //a. 获取输入框元素对象
+        var input = document.getElementById("name");
+
+        //b. 将值转为小写
+        input.value = input.value.toLowerCase();
+    }
+
+    function upper(){//大写
+        //a. 获取输入框元素对象
+        var input = document.getElementById("name");
+
+        //b. 将值转为大写
+        input.value = input.value.toUpperCase();
+    }
+
+
+
+    //3. 点击 "全选" 按钮使所有的复选框呈现选中状态 ; 点击 "反选" 按钮使所有的复选框呈现取消勾选的状态 ; -- onclick
+    function checkAll(){
+        //a. 获取所有复选框元素对象
+        var hobbys = document.getElementsByName("hobby");
+
+        //b. 设置选中状态
+        for (let i = 0; i < hobbys.length; i++) {
+            const element = hobbys[i];
+            element.checked = true;
+        }
+
+    }
+    
+    function reverse(){
+        //a. 获取所有复选框元素对象
+        var hobbys = document.getElementsByName("hobby");
+
+        //b. 设置未选中状态
+        for (let i = 0; i < hobbys.length; i++) {
+            const element = hobbys[i];
+            element.checked = false;
+        }
+    }
+
+
+
+</script>
+</html>

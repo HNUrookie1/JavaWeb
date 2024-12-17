@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>员工信息</title>
+</head>
+
+<link rel="stylesheet" href="element-ui/index.css">
+<script src="./js/vue.js"></script>
+<script src="./element-ui/index.js"></script>
+<script src="./js/axios-0.18.0.js"></script>
+
+<body>
+    <h1 align="center">员工信息列表展示</h1>
+    <div id="app">
+        <el-table :data="tableData" style="width: 100%"  stripe border >
+            <el-table-column prop="name" label="姓名" align="center" min-width="20%"></el-table-column>
+            <el-table-column prop="age" label="年龄" align="center" min-width="20%"></el-table-column>
+            <el-table-column label="图像" align="center"  min-width="20%">
+                <template slot-scope="scope">
+                    <el-image :src="scope.row.image" style="width: 80px; height: 50px;"></el-image>
+                </template>
+            </el-table-column>
+            <el-table-column prop="gender" label="性别" align="center"  min-width="20%"></el-table-column>
+            <el-table-column prop="job" label="职位" align="center"  min-width="20%"></el-table-column>
+        </el-table>
+    </div>
+</body>
+
+<style>
+    .el-table .warning-row {
+        background: oldlace;
+    }
+    .el-table .success-row {
+        background: #f0f9eb;
+    }
+</style>
+
+<script>
+    new Vue({
+        el: "#app",
+        data() {
+            return {
+                tableData: []
+            }
+        },
+        mounted(){
+            axios.get('/listEmp').then(res=>{
+                if(res.data.code){
+                    this.tableData = res.data.data;
+                }
+            });
+        },
+        methods: {
+        }
+    });
+</script>
+</html>

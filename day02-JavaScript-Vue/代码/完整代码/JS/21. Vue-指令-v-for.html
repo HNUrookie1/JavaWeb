@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue-指令-v-for</title>
+    <script src="js/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+
+        <div v-for="addr in addrs">{{addr}}</div>
+
+        <hr>
+
+        <div v-for="(addr,index) in addrs">{{index + 1}} : {{addr}}</div>
+
+    </div>
+</body>
+<script>
+    //定义Vue对象
+    new Vue({
+        el: "#app", //vue接管区域
+        data:{
+           addrs:["北京", "上海", "西安", "成都", "深圳"]
+        },
+        methods: {
+            
+        }
+    })
+</script>
+</html>

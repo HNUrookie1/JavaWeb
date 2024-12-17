@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue-指令-案例</title>
+    <script src="js/vue.js"></script>
+</head>
+<body>
+    
+    <div id="app">
+        
+        <table border="1" cellspacing="0" width="60%">
+            <tr>
+                <th>编号</th>
+                <th>姓名</th>
+                <th>年龄</th>
+                <th>性别</th>
+                <th>成绩</th>
+                <th>等级</th>
+            </tr>
+
+            <tr align="center" v-for="(user,index) in users">
+                <td>{{index + 1}}</td>
+                <td>{{user.name}}</td>
+                <td>{{user.age}}</td>
+                <td>
+                    <span v-if="user.gender == 1">男</span>
+                    <span v-if="user.gender == 2">女</span>
+                </td>
+                <td>{{user.score}}</td>
+                <td>
+                    <span v-if="user.score >= 85">优秀</span>
+                    <span v-else-if="user.score >= 60">及格</span>
+                    <span style="color: red;" v-else>不及格</span>
+                </td>
+            </tr>
+        </table>
+
+    </div>
+
+</body>
+
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+            users: [{
+                name: "Tom",
+                age: 20,
+                gender: 1,
+                score: 78
+            },{
+                name: "Rose",
+                age: 18,
+                gender: 2,
+                score: 86
+            },{
+                name: "Jerry",
+                age: 26,
+                gender: 1,
+                score: 90
+            },{
+                name: "Tony",
+                age: 30,
+                gender: 1,
+                score: 52
+            }]
+        },
+        methods: {
+            
+        },
+    })
+</script>
+</html>

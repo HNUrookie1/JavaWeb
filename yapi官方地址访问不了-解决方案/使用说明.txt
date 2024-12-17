@@ -1,0 +1,9 @@
+如果yapi的官方访问不了, 地址访问不同, 可以使用如下方案 : 
+
+1). 双击 start.bat , 启动本地的服务端程序 . 【 如果启动过程中， 一闪而过， 请检查你的JAVA_HOME环境变量是否正确配置 】
+
+2). 服务端访问程序中提供了两个访问地址 ,分别为 : 
+	
+	GET http://location:8080/emp/list
+
+	POST http://location:8080/emp/deleteById

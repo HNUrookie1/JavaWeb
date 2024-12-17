@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-效果演示</title>
+    <style>
+        body {
+            background-image: url("bg1.jpg");
+            background-size: 100% 100%;
+            background-attachment: fixed;
+            margin: 0px;
+        }
+    </style>
+</head>
+<body>
+
+    <input type="button" value="主题1" onclick="change(1)">
+    <input type="button" value="主题2" onclick="change(2)">
+    <input type="button" value="主题3" onclick="change(3)">
+    <input type="button" value="主题4" onclick="change(4)">
+    <input type="button" value="主题5" onclick="change(5)">
+
+</body>
+<script>
+    function change(i){
+        document.body.style.backgroundImage = "url('bg"+i+".jpg')";
+    }
+</script>
+</html>

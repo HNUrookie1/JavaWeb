@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax-Axios</title>
+    <script src="js/axios-0.18.0.js"></script>
+</head>
+<body>
+    
+    <input type="button" value="获取数据GET" onclick="get()">
+
+    <input type="button" value="删除数据POST" onclick="post()">
+
+</body>
+<script>
+    function get(){
+        //通过axios发送异步请求-get
+        // axios({
+        //     method: "get",
+        //     url: "http://yapi.smart-xwork.cn/mock/169327/emp/list"
+        // }).then(result => {
+        //     console.log(result.data);
+        // })
+
+
+        axios.get("http://yapi.smart-xwork.cn/mock/169327/emp/list").then(result => {
+            console.log(result.data);
+        })
+    }
+
+    function post(){
+        //通过axios发送异步请求-post
+        // axios({
+        //     method: "post",
+        //     url: "http://yapi.smart-xwork.cn/mock/169327/emp/deleteById",
+        //     data: "id=1"
+        // }).then(result => {
+        //     console.log(result.data);
+        // })
+
+        axios.post("http://yapi.smart-xwork.cn/mock/169327/emp/deleteById","id=1").then(result => {
+            console.log(result.data);
+        })
+    }
+</script>
+</html>

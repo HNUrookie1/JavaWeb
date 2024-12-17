@@ -1,0 +1,15 @@
+server:
+  port: 9000
+
+#定义对象/Map集合
+user:
+  name: Tom
+  age: 20
+  address: beijing
+
+#定义数组/List/Set
+hobby:
+  - java
+  - C
+  - game
+  - sport

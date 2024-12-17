@@ -1,0 +1,5 @@
+GET请求: 
+https://mock.apifox.cn/m1/3128855-0-default/emp/list
+
+POST请求: 
+https://mock.apifox.cn/m1/3128855-0-default/emp/deleteById
